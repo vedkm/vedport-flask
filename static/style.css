@@ -3,6 +3,7 @@ body {
   display: grid;
   background-color: white;
   margin: 0px;
+  /* grid-template-rows: 1fr 9fr; */
 }
 
 h1 h2 h3 h4 {
@@ -17,6 +18,7 @@ h1 h2 h3 h4 {
   border-bottom-color: black;
   margin-top: 8px;
   margin-bottom: 8px;
+  /* position: fixed; */
 }
 
 #content {
@@ -112,6 +114,13 @@ a.card-anchor {
 }
 
 .project-hero > img {
+  display: block;
+  margin: auto;
+  max-width: 100%;
+  height: auto;
+}
+
+.project-hero > iframe {
   display: block;
   margin: auto;
   max-width: 100%;

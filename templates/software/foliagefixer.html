@@ -4,4 +4,61 @@
     {{ super() }}
 {% endblock %}
 {% block content %}
+<div class="project-content">
+
+  <div class="project-title">
+    <h3>FoliageFixer</h3>
+    <p>Final Year Project</p>
+    <p>January 2023 to April 2023</p>
+  </div>
+  
+  <!-- <div class="project-hero">
+    <img src="{{url_for('static', filename='foliagefixer-ui.png')}}"><figcaption>App Screenshots</figcaption></img>
+</div> -->
+
+  <div class="project-hero">
+    <iframe src="https://drive.google.com/file/d/112WPPLl4moz8fD-KW5sCe2KrtlgdsLPU/preview" allow="autoplay"></iframe>
+  </div>
+
+  
+  <p>
+    For our final year project, my group (Funky - Ved Mahadeo, Ojore Kanneh, Hari Murti-Baran) knew we wanted to do something with machine learning. Our supervisor suggested plant disease classification for tomatoes and we really liked the idea. This was our first time working with machine learning but we were excited to take on the challenge.
+  </p>
+
+<h4>
+  Project Overview
+</h4>
+  <p>
+    The project consisted of an Android app, a Python/Flask backend and 2 neural network models: the Classification model and the Segmentation Model. The segmentation model isolates the diseased region of the leaf. The classification model takes the diseased region as input and classifies it as one of 10 diseases. Training the models required using 3rd party datasets as well as our own data. For segmentation, we chose a semantic segmentation approach which required manually labelling each pixel. 
+  </p>
+  <p>
+    For a full analysis of the method, please check out the <a href='{{url_for("static", filename="Funky Foliage Fixer.pdf")}}'>Project Report</a>.
+  </p>
+  
+  <h4>
+    Tech used
+  </h4>
+  <ul>
+    <li>Python/Flask</li>
+    <li>Heroku PostGres</li>
+    <li>PyTorch</li>
+    <li>OpenCV</li>
+    <li>Java</li>
+    <li>Android Studio</li>
+  </ul>
+  
+  <h4>
+    Android App
+  </h4>
+  <div>
+    <a href="https://drive.google.com/file/d/1lnVvAtaPZNKE2XIUzQuvvO-t5PlOyqC6/view?usp=share_link\"><p>App Download</p></a>
+  </div>
+
+  <!-- <h4>
+    Key Takeaways
+  </h4>
+  <ul>
+    <li>My interactions with cross functional and interdepartmental teams for this internship were highly rewarding.</li>
+  </ul> -->
+</div>
 {% endblock %}
