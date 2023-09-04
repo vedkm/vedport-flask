@@ -1,0 +1,67 @@
+{% extends "base.html" %}
+{% block title %}Software{% endblock %}
+{% block head %}
+    {{ super() }}
+{% endblock %}
+{% block content %}
+<h3>Projects</h3>
+
+<div id="portfolio">
+
+  <a class="card-anchor" href='/software/wepala'>
+  <div class="card">
+    <div class="card-title">
+      <h4>WePala</h4>
+    </div>
+    <img src="{{url_for('static', filename='wepalalogo.png')}}"></img>
+  </div>
+  </a>
+
+  <a class="card-anchor" href='/software/carib'>
+  <div class="card">
+    <div class="card-title">
+      <h4>Carib Brewery</h4>
+    </div>
+    <img src="{{url_for('static', filename='carib-logo.png')}}"></img>
+  </div>
+    </a>
+
+  <a class="card-anchor" href='/software/intelapps'>
+  <div class="card">
+    <div class="card-title">
+      <h4>Intelligent Applications</h4>
+    </div>
+    <img src="{{url_for('static', filename='intelapps-logo.png')}}"></img>
+  </div>
+    </a>
+
+  <a class="card-anchor" href='/software/foliagefixer'>
+  <div class="card">
+    <div class="card-title">
+      <h4>FoliageFixer</h4>
+    </div>
+    <img src="{{url_for('static', filename='foliagefixer1.png')}}"></img>
+  </div>
+    </a>
+
+  <a class="card-anchor" href='/software/spacesbot'>
+  <div class="card">
+    <div class="card-title">
+      <h4>Spacesbot</h4>
+    </div>
+    <img src="{{url_for('static', filename='spike.jpg')}}"></img>
+  </div>
+    </a>
+
+  <a class="card-anchor" href='/software/spotstats'>
+  <div class="card">
+    <div class="card-title">
+      <h4>Spotstats</h4>
+    </div>
+    <img src="{{url_for('static', filename='spike.jpg')}}"></img>
+  </div>
+    </a>
+
+  
+</div>
+{% endblock %}

@@ -1,0 +1,13 @@
+{% extends "base.html" %}
+{% block title %}Index{% endblock %}
+{% block head %}
+    {{ super() }}
+{% endblock %}
+{% block content %}
+    <p class="important">
+      Welcome to my portfolio!
+    </p>
+
+<img id="dog" alt="spike.jpg" src='{{url_for("static", filename="spike.jpg")}}'
+  <figcaption>spike.jpg</figcaption></img>
+{% endblock %}
