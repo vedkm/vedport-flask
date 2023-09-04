@@ -4,4 +4,75 @@
     {{ super() }}
 {% endblock %}
 {% block content %}
+<div class="project-content">
+
+  <div class="project-title">
+    <h3>SpacesBot</h3>
+    <p>Personal Project</p>
+    <p>2021-2022</p>
+    <a href="twitter.com/spacesbot1">Twitter</a>
+    <a href="github.com/vedkm/spacesbot">Github Repo</a>
+  </div>
+  
+  <div class="project-hero">
+    <img src="{{url_for('static', filename='spacesbot-hero.png')}}"><figcaption>App Screenshots</figcaption></img>
+</div>
+
+  
+  <p>
+    In 2021, in the midst of global lockdowns, Trinbagonians were bored at home 24/7. When Twitter released Spaces - a user-hosted audio chatroom - Trini Twitter jumped at the chance to host virtual fetes with DJ sets by Travis World, political debates featuring previous Attorney General Faris Al-Rawi, and even therapy sessions.
+  </p>
+  <p>
+    However, the feature was rushed out and I noticed that many Trinidadian twitter users struggled to find the "hot" spaces and felt left out. Thus, I came up with the idea to build a twitter bot that would automatically find Trini spaces and share them in a centralized location.
+  </p>
+  <p>
+    It turned out to be a great idea, so much so I eventually expanded the bot to work for 14 english speaking Caribbean countries. Suddenly, people all over the Caribbean were directly connected with each other during a time of isolation.
+  </p>
+
+<h4>
+  Project Overview
+</h4>
+  <p>
+    The project consisted of a NodeJs server that made requests to the Twitter API. The core request used the Stream api which returned a near-real-time stream of tweets all over the world. I implemented filters to narrow down the returned results to spaces posted by users from countries of interest. The meat of the algorithm was really determining:
+    <ol>
+      <li>The user's nationality</li>
+      <li>The space's nationality</li>
+    </ol>
+  </p>
+
+  <h4>Determining Nationality: User</h4>
+  <p>
+    The original approach was to simply check the user's "location" field in their bio. However, after some time I realised this was wildly inaccurate as the majority of users did not include this info. 
+  </p>
+  <p>
+    Despite this, the patriotic nature that comes with being a small island citizen made things a bit easier. The majority of Caribbean users who post spaces have keywords and flags in their account info that can paint a picture of where they are from. After some trial and error I arrived on a (seemingly) optimal set of features to check for. 
+  </p>
+
+  <h4>Determining Nationality: Space</h4>
+  <p>
+    My thinking was a space can either simply be the host's nationality, or whatever is the majority nationality of all participants in the space. The host approach was initially chosen as the API did not expose participants. However, shortly after the API was updated to return speakers. So the final implementation involved determining nationality of all speakers then using the majority as the space nationality.
+  </p>
+  <p>
+    However, determining space nationality would usually take a few seconds. In addition, I noticed that many users were common hosts/speakers and their nationality would be recalculated many times. So to speed things up I created a MSSQL server and everytime a user's nationality was determined with high confidence the algorithm would write that user to the DB. This way, whenever the user was encountered in the future, a simple DB check would suffice.
+  </p>
+  
+  <h4>
+    Tech used
+  </h4>
+  <ul>
+    <li>NodeJS/JavaScript</li>
+    <li>AWS ec2 - hosted application</li>
+    <li>AWS rds - hosted DB</li>
+    <li>Twitter API</li>
+  </ul>
+
+  <h4>
+    Key Takeaways
+  </h4>
+  <ul>
+    <li>Ultimately, I had to shut down the bot :( due to server costs.</li>
+    <li>With my machine learning knowledge today, I would redo the project with a decision tree.</li>
+    <li>There's also no future for the bot since Elon Musk ruined the API with exorbitant costs and rate limits.</li>
+  </ul>
+</div>
 {% endblock %}

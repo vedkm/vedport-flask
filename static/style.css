@@ -118,6 +118,7 @@ a.card-anchor {
   margin: auto;
   max-width: 100%;
   height: auto;
+  margin-top: 8px;
 }
 
 .project-hero > iframe {
@@ -125,6 +126,10 @@ a.card-anchor {
   margin: auto;
   max-width: 100%;
   height: auto;
+}
+
+.project-title > a {
+  display: block;
 }
 
 figcaption {
