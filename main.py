@@ -18,5 +18,9 @@ def get_project(project):
 def get_audio_portfolio():
   return render_template('audio.html')
 
+@app.route('/contact')
+def get_contact():
+  return render_template('contact.html')
+
 
 app.run(host='0.0.0.0', port=81)

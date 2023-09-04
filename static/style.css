@@ -147,3 +147,11 @@ figcaption {
   height: 100%;
   -ms-zoom: 0.75;
 }
+
+#contact {
+  margin: auto;
+}
+
+#contact > a {
+  display: block;
+}
