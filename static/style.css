@@ -131,3 +131,8 @@ figcaption {
   font-size: 0.8em;
   font-style: italic;
 }
+
+.qr-code {
+  width: 200px;
+  height: 200px;
+}
