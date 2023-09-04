@@ -7,28 +7,54 @@
 <div class="project-content">
 
   <div class="project-title">
-    <h4>WePala - Intern - May 2023 to August 2023</h4>
+    <h3>WePala - Intern - May 2023 to August 2023</h3>
   </div>
   
   <div class="project-hero">
-    <img src="{{url_for('static', filename='wepaladesk.png')}}"><figcaption>My Desk</figcaption></img>
+    <img src="{{url_for('static', filename='wepaladesk.png')}}"><figcaption>My Virtual Desk</figcaption></img>
 </div>
 
   
   <p>
-    This year I had the pleasure of working as an intern at <a href="https://wepala.com">WePala</a> from May to August.
+    In 2023, I worked as an intern at WePala. WePala is an IT services company that specializes in helping entrepreneurs realise their technological vision.
   </p>
   <p>
-    WePala is an IT services company that helps entreprenuers realise their vision in technological spaces.
+    Here, I was part of the WeOS team which is currently working on their new product: WeOS Cloud. As companies scramble to integrate ChatGPT in their services, WeOS aims to provide the unique service of streamlining ChatBot creation. In 5 minutes one can have a chatbot meticulously trained on company data.
   </p>
-  <p>
-    This internship was a highly challenging and thus rewarding experience for me. I gained experience in:
-  </p>
+  <h4>
+    My Contributions
+  </h4>
+  <ul>
+    <li>
+      Worked on a Golang back end project that mapped an internal database schema to external API schemas to allow GraphQL queries to pull data from multiple distributed sources using a universal language.
+    </li>
+    <li>
+      Extended the project by building a GraphQL API microservice for interacting with the Hubspot CRM, which involved writing a custom resolver in Golang to interpret the plain text queries and using the Echo framework to handle http requests.
+    </li>
+    <li>
+      Wrote 18 unit tests before implementing features according to the TDD framework, resulting in 75% code coverage.
+    </li>
+    <li>
+      Wrote and automated 10 Cypress/Cucumber End to End UI tests in JavaScript by following the BDD framework.
+    </li>
+  </ul>
+  
+  <h4>
+    Tech used:
+  </h4>
   <ul>
     <li>The Go Programming Language</li>
+    <li>JavaScript</li>
+    <li>Cypress</li>
     <li>GraphQL</li>
-    <li>End to end testing with Cypress and JavaScript</li>
     <li>Github Actions</li>
+  </ul>
+
+  <h4>
+    Key Takeaways
+  </h4>
+  <ul>
+    <li>Automated End to end UI testing can be very useful for large front end applications that maybe difficult to manually test. It also ensures that things don't break after a new deploy.</li>
   </ul>
 </div>
 {% endblock %}
