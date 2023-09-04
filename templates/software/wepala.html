@@ -4,5 +4,31 @@
     {{ super() }}
 {% endblock %}
 {% block content %}
+<div class="project-content">
 
+  <div class="project-title">
+    <h4>WePala - Intern - May 2023 to August 2023</h4>
+  </div>
+  
+  <div class="project-hero">
+    <img src="{{url_for('static', filename='wepaladesk.png')}}"><figcaption>My Desk</figcaption></img>
+</div>
+
+  
+  <p>
+    This year I had the pleasure of working as an intern at <a href="https://wepala.com">WePala</a> from May to August.
+  </p>
+  <p>
+    WePala is an IT services company that helps entreprenuers realise their vision in technological spaces.
+  </p>
+  <p>
+    This internship was a highly challenging and thus rewarding experience for me. I gained experience in:
+  </p>
+  <ul>
+    <li>The Go Programming Language</li>
+    <li>GraphQL</li>
+    <li>End to end testing with Cypress and JavaScript</li>
+    <li>Github Actions</li>
+  </ul>
+</div>
 {% endblock %}
